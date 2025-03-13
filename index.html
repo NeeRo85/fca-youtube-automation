@@ -3,201 +3,193 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agilam Group Content Creator Automation</title>
+    <title>Agilam Media Publisher</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
-            --primary-color: #3498db;
-            --secondary-color: #2c3e50;
-            --text-color: #34495e;
-            --bg-color: #f8f9fa;
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --text-color: #333;
+            --bg-color: #f5f6fa;
             --white: #ffffff;
         }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            line-height: 1.6;
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
             background-color: var(--bg-color);
             color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+            padding: 4rem 2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
         }
 
         .container {
             max-width: 1200px;
-            margin: 40px auto;
-            padding: 0 20px;
+            margin: 0 auto;
+            padding: 0 2rem;
         }
 
-        .hero {
-            background: linear-gradient(135deg, var(--primary-color), #2980b9);
-            color: var(--white);
-            padding: 60px 20px;
-            text-align: center;
-            border-radius: 0 0 50px 50px;
-            margin-bottom: 40px;
-        }
-
-        .hero h1 {
-            font-size: 2.5em;
-            margin: 0;
-            padding: 0;
-            border: none;
-        }
-
-        .hero p {
-            font-size: 1.2em;
-            margin: 20px 0 0;
-            color: var(--white);
-            opacity: 0.9;
-        }
-
-        .content-section {
+        .section {
             background: var(--white);
-            border-radius: 15px;
-            padding: 30px;
-            margin-bottom: 30px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
         }
 
-        .content-section:hover {
+        .section:hover {
             transform: translateY(-5px);
         }
 
-        h2 {
-            color: var(--secondary-color);
-            font-size: 1.8em;
-            margin-top: 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+        .section h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
         }
 
-        .features {
+        .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            padding: 0;
-            list-style: none;
+            gap: 2rem;
+            margin-top: 2rem;
         }
 
-        .features li {
-            background: var(--bg-color);
-            padding: 20px;
-            border-radius: 10px;
+        .feature-item {
             display: flex;
             align-items: flex-start;
-            gap: 15px;
+            gap: 1rem;
         }
 
-        .features i {
-            color: var(--primary-color);
-            font-size: 1.5em;
+        .feature-item i {
+            color: var(--secondary-color);
+            font-size: 1.5rem;
         }
 
         .disclaimer {
             background: #fff3cd;
-            border-left: 5px solid #ffc107;
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 40px;
-        }
-
-        .disclaimer strong {
+            border: 1px solid #ffeeba;
             color: #856404;
+            padding: 1rem;
+            border-radius: 5px;
+            margin: 2rem 0;
         }
 
         .privacy-link {
             display: inline-block;
-            margin-top: 30px;
-            padding: 12px 25px;
-            background-color: var(--primary-color);
+            background: var(--secondary-color);
             color: var(--white);
-            border-radius: 25px;
-            transition: all 0.3s ease;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            margin: 2rem auto;
+            transition: background-color 0.3s ease;
         }
 
         .privacy-link:hover {
-            background-color: #2980b9;
-            transform: translateY(-2px);
-            text-decoration: none;
+            background: #2980b9;
+        }
+
+        .privacy-container {
+            text-align: center;
+            margin-bottom: 3rem;
         }
 
         @media (max-width: 768px) {
-            .hero {
-                padding: 40px 20px;
-            }
-            
             .hero h1 {
-                font-size: 2em;
+                font-size: 2rem;
             }
             
-            .features {
-                grid-template-columns: 1fr;
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .section {
+                padding: 1.5rem;
             }
         }
     </style>
 </head>
 <body>
     <div class="hero">
-        <h1>Agilam Group Content Creator Automation</h1>
-        <p>Optimieren Sie Ihren Content-Workflow mit intelligenter Automatisierung</p>
+        <h1>Agilam Media Publisher</h1>
+        <p>Ihre professionelle Lösung für Content-Automatisierung</p>
     </div>
 
     <div class="container">
-        <div class="content-section">
-            <h2><i class="fas fa-rocket"></i> Über unsere Anwendung</h2>
-            <p>Willkommen bei der Content Creator Automation von Agilam Group - Ihrer Lösung für effizientes Content Management und Automatisierung. Wir helfen Ihnen dabei, Ihre Inhalte professionell zu verwalten und zu optimieren.</p>
-        </div>
-        
-        <div class="content-section">
-            <h2><i class="fas fa-star"></i> Funktionen & Vorteile</h2>
-            <ul class="features">
-                <li>
-                    <i class="fas fa-calendar-alt"></i>
-                    <span>Automatisierte Content-Planung und Veröffentlichung</span>
-                </li>
-                <li>
-                    <i class="fas fa-tasks"></i>
-                    <span>Intelligentes Content-Management-System</span>
-                </li>
-                <li>
-                    <i class="fas fa-database"></i>
-                    <span>Effiziente Verwaltung von Video-Metadaten</span>
-                </li>
-                <li>
-                    <i class="fas fa-image"></i>
-                    <span>Automatisierte Thumbnail-Generierung</span>
-                </li>
-                <li>
-                    <i class="fas fa-chart-line"></i>
-                    <span>Performance-Analyse Ihrer Inhalte</span>
-                </li>
-                <li>
-                    <i class="fas fa-clock"></i>
-                    <span>Zeitersparnis durch Automatisierung von Routineaufgaben</span>
-                </li>
-                <li>
-                    <i class="fas fa-calendar-check"></i>
-                    <span>Konsistente Veröffentlichungszeitpläne</span>
-                </li>
-            </ul>
+        <div class="section">
+            <h2>Über unsere Anwendung</h2>
+            <p>Der Agilam Media Publisher ist eine professionelle Anwendung, die entwickelt wurde, um Content-Ersteller bei der Automatisierung ihrer Arbeitsabläufe zu unterstützen. Unsere Lösung bietet effiziente Tools für die Verwaltung und Optimierung Ihrer digitalen Inhalte.</p>
         </div>
 
-        <div class="content-section">
-            <h2><i class="fas fa-cogs"></i> Wie es funktioniert</h2>
-            <p>Unsere Anwendung unterstützt Content Creator dabei, ihren Workflow zu optimieren. Nach der einfachen Einrichtung können Sie sich auf das Wesentliche konzentrieren: Die Erstellung großartiger Inhalte. Lassen Sie die Automatisierung die zeitraubenden Routineaufgaben übernehmen.</p>
+        <div class="section">
+            <h2>Funktionen & Vorteile</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fas fa-robot"></i>
+                    <div>
+                        <h3>Intelligente Automatisierung</h3>
+                        <p>Automatisieren Sie wiederkehrende Aufgaben und sparen Sie wertvolle Zeit.</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-chart-line"></i>
+                    <div>
+                        <h3>Performance-Analyse</h3>
+                        <p>Detaillierte Einblicke in Ihre Content-Performance.</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-tasks"></i>
+                    <div>
+                        <h3>Workflow-Optimierung</h3>
+                        <p>Optimierte Prozesse für effizienteres Content-Management.</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <div>
+                        <h3>Sichere Integration</h3>
+                        <p>Höchste Sicherheitsstandards für Ihre Daten.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Wie es funktioniert</h2>
+            <p>Der Agilam Media Publisher verbindet sich sicher mit Ihren Content-Plattformen und ermöglicht die automatisierte Verwaltung Ihrer digitalen Inhalte. Durch die Integration verschiedener APIs bieten wir Ihnen eine nahtlose und effiziente Arbeitsumgebung.</p>
         </div>
 
         <div class="disclaimer">
-            <strong>Wichtiger Hinweis:</strong>
-            <p>Diese Anwendung wird von der Agilam Group entwickelt, einem unabhängigen Software-Entwicklungsunternehmen. Wir sind nicht mit anderen Plattformen oder deren Muttergesellschaften verbunden oder von diesen autorisiert.</p>
+            <p><strong>Hinweis:</strong> Diese Anwendung wurde von Agilam Group entwickelt und ist nicht mit anderen Plattformen oder Diensten verbunden.</p>
         </div>
 
-        <p style="text-align: center;">
+        <div class="privacy-container">
             <a href="privacy.html" class="privacy-link">Datenschutzerklärung</a>
-        </p>
+        </div>
     </div>
 </body>
 </html> 

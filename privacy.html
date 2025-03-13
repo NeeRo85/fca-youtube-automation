@@ -3,101 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Datenschutzerklärung - Agilam Group Content Creator Automation</title>
+    <title>Datenschutzerklärung - Agilam Media Publisher</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
-            --primary-color: #3498db;
-            --secondary-color: #2c3e50;
-            --text-color: #34495e;
-            --bg-color: #f8f9fa;
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --text-color: #333;
+            --bg-color: #f5f6fa;
             --white: #ffffff;
         }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            line-height: 1.6;
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
             background-color: var(--bg-color);
             color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+            padding: 4rem 2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
         }
 
         .container {
             max-width: 1200px;
-            margin: 40px auto;
-            padding: 0 20px;
+            margin: 0 auto;
+            padding: 0 2rem;
         }
 
-        .hero {
-            background: linear-gradient(135deg, var(--primary-color), #2980b9);
-            color: var(--white);
-            padding: 60px 20px;
-            text-align: center;
-            border-radius: 0 0 50px 50px;
-            margin-bottom: 40px;
-        }
-
-        .hero h1 {
-            font-size: 2.5em;
-            margin: 0;
-            padding: 0;
-            border: none;
-        }
-
-        .content-section {
-            background: var(--white);
-            border-radius: 15px;
-            padding: 30px;
-            margin-bottom: 30px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-
-        .privacy-section {
-            margin-bottom: 20px;
-            padding: 20px;
+        .section {
             background: var(--white);
             border-radius: 10px;
-            border-left: 4px solid var(--primary-color);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
         }
 
-        .privacy-section h2 {
-            color: var(--secondary-color);
-            font-size: 1.4em;
-            margin-top: 0;
+        .section:hover {
+            transform: translateY(-5px);
+        }
+
+        .section h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 1rem;
         }
 
-        .privacy-section p {
-            margin: 10px 0;
+        .section h2 i {
+            color: var(--secondary-color);
+        }
+
+        .section p {
+            margin-bottom: 1rem;
         }
 
         .back-link {
             display: inline-block;
-            margin-top: 30px;
-            padding: 12px 25px;
-            background-color: var(--primary-color);
+            background: var(--secondary-color);
             color: var(--white);
-            border-radius: 25px;
-            transition: all 0.3s ease;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
             text-decoration: none;
+            margin: 2rem auto;
+            transition: background-color 0.3s ease;
         }
 
         .back-link:hover {
-            background-color: #2980b9;
-            transform: translateY(-2px);
-            text-decoration: none;
+            background: #2980b9;
+        }
+
+        .back-container {
+            text-align: center;
+            margin-bottom: 3rem;
         }
 
         @media (max-width: 768px) {
-            .hero {
-                padding: 40px 20px;
+            .hero h1 {
+                font-size: 2rem;
             }
             
-            .hero h1 {
-                font-size: 2em;
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .section {
+                padding: 1.5rem;
             }
         }
     </style>
@@ -105,33 +119,32 @@
 <body>
     <div class="hero">
         <h1>Datenschutzerklärung</h1>
+        <p>Agilam Media Publisher</p>
     </div>
 
     <div class="container">
-        <div class="content-section">
-            <div class="privacy-section">
-                <h2><i class="fas fa-shield-alt"></i> Datenschutz</h2>
-                <p>Diese App sammelt keine persönlichen Daten. Wir legen größten Wert auf den Schutz Ihrer Privatsphäre.</p>
-            </div>
+        <div class="section">
+            <h2><i class="fas fa-shield-alt"></i> Datenschutz</h2>
+            <p>Diese App sammelt keine persönlichen Daten. Wir legen größten Wert auf den Schutz Ihrer Privatsphäre.</p>
+        </div>
 
-            <div class="privacy-section">
-                <h2><i class="fas fa-key"></i> API-Nutzung</h2>
-                <p>Die App verwendet die Content-Plattform-APIs ausschließlich zum Veröffentlichen von Inhalten. Der Zugriff erfolgt nur im notwendigen Umfang und nach Ihrer ausdrücklichen Zustimmung.</p>
-            </div>
+        <div class="section">
+            <h2><i class="fas fa-key"></i> API-Nutzung</h2>
+            <p>Die App verwendet die Content-Plattform-APIs ausschließlich zum Veröffentlichen von Inhalten. Der Zugriff erfolgt nur im notwendigen Umfang und nach Ihrer ausdrücklichen Zustimmung.</p>
+        </div>
 
-            <div class="privacy-section">
-                <h2><i class="fas fa-lock"></i> Datensicherheit</h2>
-                <p>Alle Daten werden sicher und verschlüsselt übertragen. Wir verwenden modernste Sicherheitsstandards, um Ihre Daten zu schützen.</p>
-            </div>
+        <div class="section">
+            <h2><i class="fas fa-lock"></i> Datensicherheit</h2>
+            <p>Alle Daten werden sicher und verschlüsselt übertragen. Wir verwenden modernste Sicherheitsstandards, um Ihre Daten zu schützen.</p>
+        </div>
 
-            <div class="privacy-section">
-                <h2><i class="fas fa-user-shield"></i> Ihre Kontrolle</h2>
-                <p>Sie haben jederzeit die volle Kontrolle über Ihre Daten und können den Zugriff auf Ihre Inhalte widerrufen.</p>
-            </div>
+        <div class="section">
+            <h2><i class="fas fa-user-shield"></i> Ihre Kontrolle</h2>
+            <p>Sie haben jederzeit die volle Kontrolle über Ihre Daten und können den Zugriff auf Ihre Inhalte widerrufen.</p>
+        </div>
 
-            <p style="text-align: center;">
-                <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Zurück zur Startseite</a>
-            </p>
+        <div class="back-container">
+            <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Zurück zur Startseite</a>
         </div>
     </div>
 </body>
