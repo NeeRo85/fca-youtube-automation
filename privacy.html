@@ -3,46 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Datenschutzerklärung - FCA YouTube Automation</title>
+    <title>Datenschutzerklärung - Agilam Group Content Creator Automation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --text-color: #34495e;
+            --bg-color: #f8f9fa;
+            --white: #ffffff;
+        }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             line-height: 1.6;
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
         }
+
         .container {
-            background-color: white;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), #2980b9);
+            color: var(--white);
+            padding: 60px 20px;
+            text-align: center;
+            border-radius: 0 0 50px 50px;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 2.5em;
+            margin: 0;
+            padding: 0;
+            border: none;
+        }
+
+        .content-section {
+            background: var(--white);
+            border-radius: 15px;
             padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
-        h1 {
-            color: #2c3e50;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
+
+        .privacy-section {
+            margin-bottom: 20px;
+            padding: 20px;
+            background: var(--white);
+            border-radius: 10px;
+            border-left: 4px solid var(--primary-color);
         }
-        p {
-            color: #34495e;
+
+        .privacy-section h2 {
+            color: var(--secondary-color);
+            font-size: 1.4em;
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
-        a {
-            color: #3498db;
+
+        .privacy-section p {
+            margin: 10px 0;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 25px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            border-radius: 25px;
+            transition: all 0.3s ease;
             text-decoration: none;
         }
-        a:hover {
-            text-decoration: underline;
+
+        .back-link:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 40px 20px;
+            }
+            
+            .hero h1 {
+                font-size: 2em;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="hero">
         <h1>Datenschutzerklärung</h1>
-        <p>Diese App sammelt keine persönlichen Daten.</p>
-        <p>Die App verwendet die YouTube API ausschließlich zum Veröffentlichen von Videos.</p>
-        <p>Alle Daten werden sicher und verschlüsselt übertragen.</p>
-        <p><a href="index.html">Zurück zur Startseite</a></p>
+    </div>
+
+    <div class="container">
+        <div class="content-section">
+            <div class="privacy-section">
+                <h2><i class="fas fa-shield-alt"></i> Datenschutz</h2>
+                <p>Diese App sammelt keine persönlichen Daten. Wir legen größten Wert auf den Schutz Ihrer Privatsphäre.</p>
+            </div>
+
+            <div class="privacy-section">
+                <h2><i class="fas fa-key"></i> API-Nutzung</h2>
+                <p>Die App verwendet die Content-Plattform-APIs ausschließlich zum Veröffentlichen von Inhalten. Der Zugriff erfolgt nur im notwendigen Umfang und nach Ihrer ausdrücklichen Zustimmung.</p>
+            </div>
+
+            <div class="privacy-section">
+                <h2><i class="fas fa-lock"></i> Datensicherheit</h2>
+                <p>Alle Daten werden sicher und verschlüsselt übertragen. Wir verwenden modernste Sicherheitsstandards, um Ihre Daten zu schützen.</p>
+            </div>
+
+            <div class="privacy-section">
+                <h2><i class="fas fa-user-shield"></i> Ihre Kontrolle</h2>
+                <p>Sie haben jederzeit die volle Kontrolle über Ihre Daten und können den Zugriff auf Ihre Inhalte widerrufen.</p>
+            </div>
+
+            <p style="text-align: center;">
+                <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Zurück zur Startseite</a>
+            </p>
+        </div>
     </div>
 </body>
 </html> 

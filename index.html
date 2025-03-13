@@ -3,45 +3,201 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FCA YouTube Automation</title>
+    <title>Agilam Group Content Creator Automation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --text-color: #34495e;
+            --bg-color: #f8f9fa;
+            --white: #ffffff;
+        }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             line-height: 1.6;
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
         }
+
         .container {
-            background-color: white;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), #2980b9);
+            color: var(--white);
+            padding: 60px 20px;
+            text-align: center;
+            border-radius: 0 0 50px 50px;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 2.5em;
+            margin: 0;
+            padding: 0;
+            border: none;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin: 20px 0 0;
+            color: var(--white);
+            opacity: 0.9;
+        }
+
+        .content-section {
+            background: var(--white);
+            border-radius: 15px;
             padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
         }
-        h1 {
-            color: #2c3e50;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
+
+        .content-section:hover {
+            transform: translateY(-5px);
         }
-        p {
-            color: #34495e;
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 1.8em;
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
-        a {
-            color: #3498db;
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 0;
+            list-style: none;
+        }
+
+        .features li {
+            background: var(--bg-color);
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .features i {
+            color: var(--primary-color);
+            font-size: 1.5em;
+        }
+
+        .disclaimer {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 40px;
+        }
+
+        .disclaimer strong {
+            color: #856404;
+        }
+
+        .privacy-link {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 25px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .privacy-link:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
             text-decoration: none;
         }
-        a:hover {
-            text-decoration: underline;
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 40px 20px;
+            }
+            
+            .hero h1 {
+                font-size: 2em;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
+    <div class="hero">
+        <h1>Agilam Group Content Creator Automation</h1>
+        <p>Optimieren Sie Ihren Content-Workflow mit intelligenter Automatisierung</p>
+    </div>
+
     <div class="container">
-        <h1>FCA YouTube Automation</h1>
-        <p>Diese Seite dient der OAuth-Verifizierung für die YouTube Automation.</p>
-        <p>Die App wird verwendet, um Videos automatisch auf YouTube zu veröffentlichen.</p>
-        <p><a href="privacy.html">Datenschutzerklärung</a></p>
+        <div class="content-section">
+            <h2><i class="fas fa-rocket"></i> Über unsere Anwendung</h2>
+            <p>Willkommen bei der Content Creator Automation von Agilam Group - Ihrer Lösung für effizientes Content Management und Automatisierung. Wir helfen Ihnen dabei, Ihre Inhalte professionell zu verwalten und zu optimieren.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2><i class="fas fa-star"></i> Funktionen & Vorteile</h2>
+            <ul class="features">
+                <li>
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>Automatisierte Content-Planung und Veröffentlichung</span>
+                </li>
+                <li>
+                    <i class="fas fa-tasks"></i>
+                    <span>Intelligentes Content-Management-System</span>
+                </li>
+                <li>
+                    <i class="fas fa-database"></i>
+                    <span>Effiziente Verwaltung von Video-Metadaten</span>
+                </li>
+                <li>
+                    <i class="fas fa-image"></i>
+                    <span>Automatisierte Thumbnail-Generierung</span>
+                </li>
+                <li>
+                    <i class="fas fa-chart-line"></i>
+                    <span>Performance-Analyse Ihrer Inhalte</span>
+                </li>
+                <li>
+                    <i class="fas fa-clock"></i>
+                    <span>Zeitersparnis durch Automatisierung von Routineaufgaben</span>
+                </li>
+                <li>
+                    <i class="fas fa-calendar-check"></i>
+                    <span>Konsistente Veröffentlichungszeitpläne</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2><i class="fas fa-cogs"></i> Wie es funktioniert</h2>
+            <p>Unsere Anwendung unterstützt Content Creator dabei, ihren Workflow zu optimieren. Nach der einfachen Einrichtung können Sie sich auf das Wesentliche konzentrieren: Die Erstellung großartiger Inhalte. Lassen Sie die Automatisierung die zeitraubenden Routineaufgaben übernehmen.</p>
+        </div>
+
+        <div class="disclaimer">
+            <strong>Wichtiger Hinweis:</strong>
+            <p>Diese Anwendung wird von der Agilam Group entwickelt, einem unabhängigen Software-Entwicklungsunternehmen. Wir sind nicht mit anderen Plattformen oder deren Muttergesellschaften verbunden oder von diesen autorisiert.</p>
+        </div>
+
+        <p style="text-align: center;">
+            <a href="privacy.html" class="privacy-link">Datenschutzerklärung</a>
+        </p>
     </div>
 </body>
 </html> 
