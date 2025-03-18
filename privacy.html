@@ -66,6 +66,41 @@
             transition: transform 0.3s ease;
         }
 
+        .section ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 1.5rem 0;
+        }
+
+        .section ul li {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        .section ul li:before {
+            content: "•";
+            color: var(--secondary-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            font-size: 1.2rem;
+            line-height: 1;
+        }
+
+        .section ul li strong {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .section p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            color: var(--text-color);
+        }
+
         .section:hover {
             transform: translateY(-5px);
         }
@@ -81,10 +116,6 @@
 
         .section h2 i {
             color: var(--secondary-color);
-        }
-
-        .section p {
-            margin-bottom: 1rem;
         }
 
         .back-link {
